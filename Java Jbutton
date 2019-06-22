@@ -1,0 +1,29 @@
+/* java j button class is used to add platform independent button to a swing application.*/
+package JavaSwing;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+public class Jbutton {
+JButton(){
+JFrame frame=new JFrame();
+JButton b=new JButton("Click Me");
+b.setBounds(50,50,90,50);
+/*You can use setBounds(x, y, width, height) to specify the position and size of a GUI component 
+if you set the layout to null . Then (x, y) is the coordinate of the upper-left corner of that 
+component. setBounds is used to define the bounding rectangle of a component.*/
+frame.add(b);
+frame.setSize(300,200);//to set the frame size
+frame.setLayout(null);//The setLayout(...) method allows you to set the layout of the container, often
+a JPanel, to say FlowLayout, BorderLayout, GridLayout, null layout, or whatever layout desired. The 
+layout manager helps lay out the components held by this container.
+frame.setVisible(true);
+setVisible() is a method that has return type boolean. It sets the currently made attributes to be
+visible on the screen in GUI application mainly Java Swing.
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+If you don't have it, the JFrame will just be disposed. The frame will close, but the app will continue to run. 
+Calling setDefaultCloseOperation(EXIT_ON_CLOSE) does exactly this. It causes the application to exit when the
+application receives a close window event from the operating system.
+}
+public static void main(String[] args){
+new JButton();
+}}
+  
