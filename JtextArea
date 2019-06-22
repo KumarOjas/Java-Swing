@@ -1,0 +1,44 @@
+/*A JTextArea is a multi-line area that displays plain text. It is intended to be a lightweight component
+that provides source compatibility with the java.awt.TextArea class where it can reasonably do so. You can
+find information and examples of using all the text components in Using Text Components, a section in The
+Java Tutorial.
+
+*/
+
+package JavaSwing;
+import javax.swing.*;
+public class jtextarea {
+jtextarea(){
+JFrame  f=new JFrame();
+JTextArea area=new JTextArea("Welcome to Java Swing");
+area.setBounds(10,30,200,200);
+f.add(area);
+f.setSize(300,300);
+f.setLayout(null);
+f.setVisible(true);
+}
+public static void main(String args[]){
+new jtextarea();
+}}
+
+Output:
+     ______________________________
+    |                             |
+    |                             |
+    |                             |
+    |                             |
+    |    Welcome to Java Swing    |
+    |                             |
+    |                             |
+    |                             |
+    |                             |
+    |                             |
+    |_____________________________|                           
+    
+
+
+
+
+
+
+
