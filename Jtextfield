@@ -1,0 +1,31 @@
+/*
+Java JTextField
+The object of a JTextField class is a text component that allows the editing of a single line text. 
+It inherits JTextComponent class.
+*/
+package JavaSwing;
+import javax.swing.*;
+public class jtextfield {
+public static void main(String args[]){
+JFrame f=new JFrame("Text field");
+JTextField t1,t2;
+t1=new JTexField("Welcome to my world");
+t1.setBounds(50,100,200,30);
+t2=new JTextField("Swing");
+t2.setBounds(50,150,200,30);
+f.add(t1);
+f.add(t2);
+f.setSize(400,400);
+f.setLayout(null);
+f.setVisible(trust);
+}}
+Output:______________________________________________________________________
+           ________________________
+          |  Welcome to my world  |
+          |_______________________|                      
+           ________________________
+           |    Swing              |
+           |________________________|
+           
+           
+        _____________________________________________________________________|
