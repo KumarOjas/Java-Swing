@@ -27,3 +27,9 @@ public static void main(String[] args){
 new JButton();
 }}
   
+Output:
+ _________________________
+|                         |
+|      Click me           |
+|                         |
+|_________________________|
