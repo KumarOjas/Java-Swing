@@ -1,0 +1,31 @@
+/* 
+Java JLabel
+The object of JLabel class is a component for placing text in a container. It is used to 
+display a single line of read only text. The text can be changed by an application but a user
+cannot edit it directly. It inherits JComponent class.
+*/
+
+
+package JavaSwing;
+import javax.swing.*;
+public class jlabel {
+public static void main(String args[]){
+ JFrame f=new JFrame("Label Example");
+ JLabel l1,l2;
+ l1=new JLabel("First  Label");
+ l1.setBounds(50,50,100,350);
+ l2=new JLabel("Second label");
+  l2.setBounds(50,50,100,350);
+  f.add(l1);
+  f.add(l2);
+  f.setSize(300,300);
+  f.setLayout(null);
+  f.setVisible(true);
+  }}
+ 
+ Output:
+ 2nd Label
+ 
+ 
+ 
+ First label
