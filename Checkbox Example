@@ -1,0 +1,136 @@
+package JavaSwing;
+import javax.swing.*;
+import java.awt.event.*;
+public class checkboxExample extends JFrame implements ActionListener {
+  JLabel l;
+  JCheckBox cb1,cb2,cb3;
+  JButton b;
+  checkboxExample(){
+  l=new JLabel("Food Order");
+  l.setBounds(50,50,300,20);
+  cb1=new JCheckBox("Burger @120");
+  cb1.setBounds(100,100,150,20)
+  cb2=new JCheckBox("Burger @150");
+  cb2.setBounds(100,150,150,20);
+  cb3=new JCheckBox("Burger @80");
+  cb3.setBounds(100,200,150,20); 
+  b=new JButton("Order");
+  J.setBounds(100,250,80,30);
+  b.addActionListener(this);
+  add(l);
+  add(cb1);
+  add(cb2);
+  add(cb3);
+  add(b);
+  setSize(400,400);
+  setLayout(null);
+  setVisible(true);
+  setDefaultCloseOperation(EXIT_ON_COSE);
+  }
+  public void actionPerformed(ActionEvent e) {
+  float amount=0;
+  String msg="";
+  if(cb1.isSelected()) {
+  amount+=120;
+  msg="Burger:120\n";
+  }
+   if(cb2.isSelected()) {
+  amount+=150;
+  msg+="Tea:150\n";
+  }
+   if(cb3.isSelected()) {
+  amount+=80;
+  msg="Burger:80\n";
+  }
+  msg+="__________________\n";
+  JOptionPane.showMessageDialog(this,msg+"Total:"+amount);
+  }
+  public staic void main(String args[]){
+  new checkboxExample();
+  }}
+  
+  /* JFrame is a class of javax.swing package extended by java.awt.frame, it adds support for
+  JFC/SWING component architecture. It is the top level window, with border and a title bar.
+  JFrame class has many methods which can be used to customize it.*/
+  
+  
+  ____________________________________________
+  |                                          |
+  |       Food Order                         |
+  |                                          |
+  |        [/] Burger @120                   |              
+  |                                          |
+  |         [/] Tea @150                     |          
+  |                                          |
+  |         [/] Juice @80                    |
+  |                                          |
+  |                                          |
+  |                                          |
+  |                                          |
+  |                                          |
+  |           ___________________            |
+  |           |  Order           |           |
+  |           |__________________|           |   
+  |                                          |
+  |                                          |
+  |                                          |
+  |                                          |
+  |                                          |
+  |__________________________________________|                                          
+  
+  
+  _________________________________________
+  |                                       |
+  |          Burger:120                   |
+  |          Tea:150                      |
+  |          Juice:80                     |  
+  |           _____________               |
+  |                                       |
+  |            Total:350.0                |
+  |                                       |
+  |                   [OK]                |
+  |                                       |
+  |                                       |
+  |                                       |
+  |                                       |
+  |                                       |
+  |                                       |
+  |                                       |
+  |_______________________________________|
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
