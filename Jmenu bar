@@ -45,6 +45,8 @@ public class Jmenubar extends JFrame {
       |________________________|
       
       
+   //Example 2
+   
       package JavaSwing;
       import javax.swing.*;
       public class Jmenubar1 {
@@ -62,16 +64,16 @@ public class Jmenubar extends JFrame {
         i4=new JMenuItem("Save");
          i5=new JMenuItem("Save as");
          menu.add(i1);
-          menu.add(i2);
-           menu.add(i3);
-            menu.add(i4);
-             menu.add(i5);
-             menu.add(submenu);
-             mb.add(menu);
-             f.setJmenuBar(mb);
-             f.setSize(400,400);
-             f.setLayout(null);
-             f.setVisible(true);
+         menu.add(i2);
+         menu.add(i3);
+         menu.add(i4);
+         menu.add(i5);
+         menu.add(submenu);
+         mb.add(menu);
+        f.setJmenuBar(mb);
+        f.setSize(400,400);
+        f.setLayout(null);
+        f.setVisible(true);
              }
        public static void main(String args[]) {
        new Jmenubar1();
@@ -90,45 +92,62 @@ public class Jmenubar extends JFrame {
                       |___________|           
        
        
+       Example 3
+       package JavaSwing;
+       import java.awt.event.KeyEvent;
+       import javax.swing.JFrame;
+       import javax.swing.JMenu;
+       import javax.swing.JMenuBar;
+       import javax.swing.JMenuItem;
+       public class Menufiles {
+       public static void main(final String args[])
+       {
+       JFrame frame=new JFrame("ABC");
+       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       JMenuBar menuBar=new JMenuBar();
+       JMenu fileMenu=new JMenu("File");
+       fileMenu.setMnemonic(KeyEvent.VK_F);
+       menuBar.add(fileMenu);
        
-       
-       
-       
-       
-       
-             
-             
-             
-             
-             
-             
-              
-         
-      
-      
-    
-      
-      
-      
-      
-      
-      
+/*       JMenuBar : setMnemonic() and addSeparator()
+
+We can add shortcuts for the File and Elements menu items by adding the following statements after you.
+Add the menu items to the menu bar:
+
+menu1.setMnemonic(‘F’); // Create shortcut
+
+menu2.setMnemonic(‘E’); // Create shortcut
+
+This method is inherited from the AbstractButton class, so all subclasses of this class inherit this
+method. The argument is a character from the label for the item that is to be the shortcut
+character — under Windows, the File menu would then pop up if you key Alt+F. The effect of 
+setMnemonic() is to implement the shortcut and underline the shortcut character letter in 
+the menu label. The shortcut for each menu on the menu bar must be a unique key combination.
+
+addSeparator () :
+
+The separator appears following the previous menu item that you added to the menu.
+*/
+      JMenuItem newMenuItem=new JMenuItem("New",KeyEvent.VK_N);
+      fileMenu.add(newMenuItem);
+      frame.setJMenuBar(menuBar);
+      frame.setSize(350,250);
+      frame.setVisible(true);
+      }}
      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+     
+     Output:
+     
+     
+     _____________________________
+     |ABC              - [] *    | 
+     |File                       |
+     |New                        |
+     |                           |
+     |                           |
+     |                           |
+     |                           |
+     |                           |
+     |                           |
+     |___________________________|
+     
