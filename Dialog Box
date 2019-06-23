@@ -1,4 +1,7 @@
+//Example 1
 package JavaSwing;
+
+//Example 1
 import javax.swing.*;
 public class OptionPane {
 JFrame f;
@@ -18,3 +21,98 @@ new OptionPane();
            |                                 |
            |                                 |
            |_________________________________|                                 
+
+//Example 2
+package JavaSwing;
+import javax.swing.*;
+
+public class OptionPane1 {
+    JFrame f;
+    OptionPane1(){
+    f=new JFrame();
+    JOptionPane.showMessageDialog(f,"SuccessFully Updated Record","Alert",JOptionPane.WARNING_MESSAGE);
+    }
+    public static void main(String args[])
+    {
+      new OptionPane1();
+      }}
+      
+      
+   
+    
+    
+    
+    _________________________________
+   | Alert                        * |
+   |                                |
+   |  SuccessFully Updated Record   |                        
+   |                                |
+   |           [OK]                 |
+   |                                |
+   |________________________________|   
+   
+   
+   
+   
+   //Example 3
+   
+  package JavaSwing;
+  import javax.swing.*;
+  import java.awt.event.*;
+  public class OptionPane2 extends WindowAdapter {
+  JFrame f;
+  OptionPane2(){
+  f= new JFrame();
+  f.addWindowsListener(this);
+  f.setSize(300,300);
+  f.setLayout(null);
+  f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+  f.setVisible(true);
+  }
+  public void windowClosing(windowEvent e){
+  int a=JOptionPane.showConfirmDialog(f,"Are you Sure?");
+  if(a==JOptionPane.YES_OPTION){
+  f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  }}
+  public static void main(String args[]){
+        new OptionPane2();
+        
+        }}
+  
+  Output:
+  ___________________________
+  | Select an Option        |
+  |                         |
+  |   Are you Sure?         |
+  |                         |
+  |   [Yes] [No] [Cancel]   |
+  |_________________________|                         
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
