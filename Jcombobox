@@ -1,0 +1,114 @@
+
+/*
+Java JComboBox
+The object of Choice class is used to show popup menu of choices. Choice selected by user is shown on the
+top of a menu. It inherits JComponent class 
+*/
+package JavaSwing;
+import javax.swing.*;
+public class JCombobox 
+{
+JFrame f;
+JCombobx()
+{
+f=new JFrame("Combo box");
+String Lang[]={"C++","Java","Python","R"};
+JComboBox cb=new JComboBox(Lang);
+cb.setBounds(50,50,90,20);
+f.add(cb);
+f.setLayout(null);
+f.setSize(400,500);
+f.setVisible(true);
+}
+public static void main(String [] args){
+new JCombobox();
+}}
+
+Output:
+
+________________________________________
+|  Combo box        - []  *            |
+|                                      |
+|        [c++^]                        |     
+|         Java                         |    
+|         Python                       |
+|         R                            |
+|                                      | 
+|                                      |
+|                                      |
+|                                      |
+|______________________________________|
+
+
+//Program 2
+package JavaSwing;
+import java.awt.event.ActionEvent;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+public class jcombo {
+   
+   public static void main(String args[])
+   
+   JFrame frame=new JFrame();
+   frame.setDefaultCloseOperation(JFrame.Exit_ON_CLOSE);
+   JButton jButton1=new JButton("Button");
+   String[] myString={"java","JBuilder","JFC","Swing"};
+   final JList jList1=new Jlist(myString);
+   jButton1.addActionListener(new java.awt.event.ActionListener()
+   {
+   public void actionPerformed(ActionEvent e){
+   Object contents=jList1.getSelectedValue();
+   System.out.println(contents);
+   }});
+   frame.add(jList1,"Center");
+   frame.add(jButton1,"South");
+   frame.setSize(300,200);
+   frame.setVisible(true);
+   }}
+   
+   Output:
+   
+   ________________________________________
+   |                             - []  *   |
+   |                                       |
+   |   java                                |
+   |   JBuilder                            |
+   |   JFC                                 |
+   |   swing                               |
+   |                                       |
+   |                                       |
+   |                                       |
+   |              [Button]                 |
+   |_______________________________________|_
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
