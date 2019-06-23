@@ -45,6 +45,87 @@ public class Jmenubar extends JFrame {
       |________________________|
       
       
+      package JavaSwing;
+      import javax.swing.*;
+      public class Jmenubar1 {
+      JMenu menu,submenu;
+      JMenuItem i1,,i2,i3,i4,i5;
+      
+      JMenubar1(){
+      JFrame f=new JFrame("Menu and MenuItem ");
+      JMenuBar mb=new JMenuBar();
+      menu=new JMenu("File");
+      submenu=new JMenu("edit");
+      i1=new JMenuItem("New");
+      i2=new JMenuItem("Open");
+       i3=new JMenuItem("Open File");
+        i4=new JMenuItem("Save");
+         i5=new JMenuItem("Save as");
+         menu.add(i1);
+          menu.add(i2);
+           menu.add(i3);
+            menu.add(i4);
+             menu.add(i5);
+             menu.add(submenu);
+             mb.add(menu);
+             f.setJmenuBar(mb);
+             f.setSize(400,400);
+             f.setLayout(null);
+             f.setVisible(true);
+             }
+       public static void main(String args[]) {
+       new Jmenubar1();
+       }
+       Output:
+       [File]
+       
+       ___________
+      |New       | 
+      | Open     |
+      | Open File|
+      | Save     |
+      | Save as  |    ____________
+      | edit>    |    |  Save     |
+      |__________|    |  Save as  |
+                      |___________|           
+       
+       
+       
+       
+       
+       
+       
+       
+             
+             
+             
+             
+             
+             
+              
+         
+      
+      
+    
+      
+      
+      
+      
+      
+      
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
