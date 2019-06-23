@@ -1,0 +1,20 @@
+package JavaSwing;
+import javax.swing.*;
+public class OptionPane {
+JFrame f;
+OptionPane(){
+f=new JFrame();
+JOptionPane.showMessageDialog(f,"Hello welcome to Dialogbox");
+}
+public static void main(String args[]){
+new OptionPane();
+}}
+
+
+           ___________________________________
+           |Message                        * | 
+           |                                 |
+           |    Hello welcome to DialogBox   |
+           |                                 |
+           |                                 |
+           |_________________________________|                                 
