@@ -1,0 +1,48 @@
+/*Java JScrollBar
+The object of JScrollbar class is used to add horizontal and vertical scrollbar. It is 
+an implementation of a scrollbar. It inherits JComponent class.
+
+JScrollBar class declaration
+Let's see the declaration for javax.swing.JScrollBar class.
+
+public class JScrollBar extends JComponent implements Adjustable, Accessible  
+Commonly used Constructors:
+Constructor	Description
+JScrollBar()	Creates a vertical scrollbar with the initial values.
+JScrollBar(int orientation)	Creates a scrollbar with the specified orientation and the 
+initial values.
+JScrollBar(int orientation, int value, int extent, int min, int max)	Creates a scrollbar 
+with the specified orientation, value, extent, minimum, and maximum.
+*/
+
+
+
+
+package JavaSwing;
+import javax.swing.*;
+public class scrollbar {
+scrollbar()
+{
+JFrame f=new JFrame("Scrollbar");
+JScrollBar s=new JScrollBar();
+s.setBounds(100,100,50,100);
+f.add(s);
+f.setSize(400,400);
+f.setLayout(null);
+f.setVisible(true);
+}
+public static void main(String args[]){
+new scrollbar();
+}}
+
+
+Output: _____
+        | ^ | 
+        |___|
+        |___|
+        |   |
+        |\/ |   
+
+
+
+
