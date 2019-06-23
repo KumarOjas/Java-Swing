@@ -1,0 +1,112 @@
+/*
+
+Java Swing | JTable
+The JTable class is a part of Java Swing Package and is generally used to display or edit two-dimensional data that is having both
+rows and columns. It is similar to a spreadsheet. This arranges data in a tabular form.
+
+Constructors in JTable:
+
+JTable(): A table is created with empty cells.
+JTable(int rows, int cols): Creates a table of size rows * cols.
+JTable(Object[][] data, Object []Column): A table is created with the specified name where []Column defines the column names.
+Functions in JTable:
+
+addColumn(TableColumn []column) : adds a column at the end of the JTable.
+clearSelection() : Selects all the selected rows and columns.
+editCellAt(int row, int col) : edits the intersecting cell of the column number col and row number row programmatically,
+if the given indices are valid and the corresponding cell is editable.
+setValueAt(Object value, int row, int col) : Sets the cell value as ‘value’ for the position row, col in the JTable.
+*/
+   
+package JavaSwing;
+public class jtable
+{
+JFrame f;
+jtable(){
+f=new JFrame();
+String data[][]={"1200","Ojas","6000000"},
+                 {"1400","Kumar","800000"},
+                 { "1800 "Ayushi" ,1200000"}
+                 };
+     
+     String column[]={"ID","Name","Salary"};
+     JTable jt=new  JTable(data,column);
+     jt.setBounds(30,40,200,300);
+     JScrollPane  sp=new JScrollPane(jt);
+     f.add(sp);
+     f.setSize(300,400);
+     f.setVisible(true);
+     }
+     public static void main(String [] args)
+
+  {
+  
+  new jtable();
+  
+  
+  }}
+     
+     Output:
+      ___________________________________________             
+     |       |              |           - [] *   |
+     | ID    |       Name   |         Salary     |
+     |       |              |                    |
+     |1200   |      Ojas    |        6000000     |
+     |       |              |                    |
+     |       |              |                    |
+     |1400   |      Kumar   |        800000      |
+     |       |              |                    |
+     |       |              |                    |
+     |       |              |                    |
+     |       |              |                    |
+     |1800   |      Ayushi  |       1200000      |
+     |       |              |                    |               
+     | ______|______________|____________________|                                        
+                                              
+                                              
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
