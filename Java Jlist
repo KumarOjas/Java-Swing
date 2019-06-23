@@ -1,0 +1,59 @@
+/*
+Java JList
+The object of JList class represents a list of text items. The list of text items can be set 
+up so that the user can choose either one item or multiple items. It inherits JComponent class.
+*/
+
+package JavaSwing;
+import javax.swing.*;
+public class JList
+{
+Jlist() 
+{
+JFrame f=new JFrame();
+DefaultListisModel<String> l1=new DefaultListModel<>();
+l1.addElement("Item 1");
+l1.addElement("Item 2");
+l1.addElement("Item 3");
+l1.addElement("Item 4");
+l1.addElement("Item 5");
+
+JList<String> list=new JList<>(l1);
+list.setBounds(100,100,75,75);
+f.add(list);
+f.add(400,400);
+f.setLayout(null);
+f.setVisible(true);
+}
+public static void main(String args[]){
+new JList();
+}}
+
+
+__________________________________
+|                  -   []  *      |
+|_________________________________|                             
+|                                 |
+|       Item 1                    |      
+|       Item 2                    |      
+|       Item 3                    |      
+|       Item 4                    |      
+|                                 |
+| ________________________________|                                
+
+
+/*Item 5 is not displayed because of the size issue */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
