@@ -1,0 +1,53 @@
+/*
+Java JMenuBar, JMenu and JMenuItem
+The JMenuBar class is used to display menubar on the window or frame. It may 
+have several menus.
+
+The object of JMenu class is a pull down menu component which is displayed from the menu bar. It
+inherits the JMenuItem class.
+
+The object of JMenuItem class adds a simple labeled menu item. The items used in a menu must belong
+to the JMenuItem or any of its subclass.
+*/
+
+package JavaSwing;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+public class Jmenubar extends JFrame {
+ private JMenuBar menubar=new JMenuBar();
+ public Jmenubar(String title) {
+      setTitle(title);
+      setDefaultCloseOperation(EXIT_ON_CLOSE);
+      setJMenuBar(menubar);
+      JMenu fileMenu=new JMenu("File");
+      JMenu edit=new JMenu("Edit");
+       JMenu source=new JMenu("Source");
+       menubar.add(fileMenu);
+       menubar.add(edit);
+       menubar.add(source);
+       }
+       public static void main(String args[]){
+       Jmenubar window=new Jmenubar("Eclipse");
+       window.setBounds(30,30,300,300);
+       window.setVisible(true);
+       }}
+      
+      Output:
+       _________________________
+      |Eclipse       - [] *    |
+      | File Edit Source       |
+      |                        |
+      |                        |
+      |                        |
+      |                        |
+      |                        |
+      |________________________|
+      
+      
+      
+      
+      
+      
+      
+      
