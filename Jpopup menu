@@ -1,0 +1,49 @@
+/*
+Java Swing | JPopupMenu
+
+JPopupMenu is a class of javax.swing package . It is an implementation of PopupMenu . 
+JPopupMenu generates a small window that pops up and displays a series of choices. 
+JPopupMenu can be used to generate a small window at any position within the container.
+Constructor of the class are :
+
+JPopupMenu() : creates a popup menu with empty name
+JPopupMenu(String name) : creates a popup menu with specified title.
+Commonly used methods of JPopupMenu are :
+
+add(JMenuItem menuItem) : add menuItem to the popup menu.
+add(String s) : add String to the popup menu .
+String getLabel() : get the popup menu’s label.
+boolean is Visible() : returns whether the JPopup menu is visible or not.
+setLabel(String s) : sets the popup menu’s label.
+setLocation(int x, int y) : sets the pop up menu;s location to the given coordinates
+setPopupSize(int width, int height) : set the popup size to give height and width
+setVisible(boolean b) : sets the visibility of the pop up menu, visible if true is passed as
+argument or vice versa.
+show(Component c, int x, int y) : displays the popup menu at x, y position within the component c.
+*/
+
+package JavaSwing;
+import javax.swing.*;
+import java.awt.event.*;
+public class popup 
+{
+publlic static void main(String args[])
+{
+final JFrame frame=new JFrame("JFrame");
+final JPopMenu popup=new JPopupMenu();
+JMenuItem menuItem=new JMenuItem("New Project", new ImageIcon("C:\\Users\\ABC\\eclipse-workspace....png");
+menuItem.setMnemonic(KeyEvent.VK_P);
+menuItem.getAccessibleContext().setAccessibleDescription("New Project");
+menuItem.addActionListener(new ActionListener(){
+
+
+
+
+
+
+
+
+
+
+
+}
