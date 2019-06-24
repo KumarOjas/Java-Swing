@@ -1,0 +1,80 @@
+/*
+Java JSeparator
+The object of JSeparator class is used to provide a general purpose component for implementing divider
+lines. It is used to draw a line to separate widgets in a Layout. It inherits JComponent class.
+
+JSeparator class declaration
+public class JSeparator extends JComponent implements SwingConstants, Accessible  
+Commonly used Constructors of JSeparator
+Constructor	Description
+JSeparator()	Creates a new horizontal separator.
+JSeparator(int orientation)	Creates a new separator with the specified horizontal or vertical
+orientation.
+Commonly used Methods of JSeparator
+Method	Description
+void setOrientation(int orientation)	It is used to set the orientation of the separator.
+int getOrientation()	It is used to return the orientation of the separator.
+*/
+package JavaSwing;
+import java.awt.event.KeyEvent;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JMenuItem;
+public class JSeparator{
+ 
+ public static void main(String args[])
+ {
+ JFrame frame=new JFrame("Menu Simple Example");
+ frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ JMenuBar menuBar=new JMenuBar();
+ JMenu fileMenu=new JMenu("File");
+ fileMenu.setMnemonic(KeyEvent.VK_F);
+ menuBar.add(fileMenu);
+ JMenuItem newMenuItem= new JMenuItem("New",KeyEvent.VK_N);
+ fileMenu.add(newMenuItem);
+ fileMenu.addSeparator();
+ JMenuItem saveMenuItem=new JmenuItem("Save",KeyEvent.VK_S);
+ filemenu.add(saveMenuItem);
+ frame.setJMenuBar(menuBar);
+ frame.setSize(350,250);
+ frame.setVisible(true);
+ 
+ ___________________________________________________________
+|  Menu Simple Example                       - [] *        |
+|                                                          |
+|  File                                                    |   
+|  |New|                                                   |     
+|  _____                                                   |
+|  |Save|                                                  |                                                   
+|                                                          |
+|                                                          |
+|                                                          |                 
+|                                                          |
+|__________________________________________________________|                                                          |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
