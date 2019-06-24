@@ -1,0 +1,73 @@
+/*
+Java JProgressBar
+The JProgressBar class is used to display the progress of the task. It inherits JComponent class.
+
+JProgressBar class declaration
+Let's see the declaration for javax.swing.JProgressBar class.
+
+public class JProgressBar extends JComponent implements SwingConstants, Accessible  
+Commonly used Constructors:
+Constructor	Description
+JProgressBar()	It is used to create a horizontal progress bar but no string text.
+JProgressBar(int min, int max)	It is used to create a horizontal progress bar with the specified
+minimum and maximum value.
+JProgressBar(int orient)	It is used to create a progress bar with the specified orientation, it can
+be either Vertical or Horizontal by using SwingConstants.VERTICAL and SwingConstants.HORIZONTAL
+constants.
+JProgressBar(int orient, int min, int max)	It is used to create a progress bar with the specified 
+orientation, minimum and maximum value.
+Commonly used Methods:
+Method	Description
+void setStringPainted(boolean b)	It is used to determine whether string should be displayed.
+void setString(String s)	It is used to set value to the progress string.
+void setOrientation(int orientation)	It is used to set the orientation, it may be either vertical
+or horizontal by using SwingConstants.VERTICAL and SwingConstants.HORIZONTAL constants.
+void setValue(int value)	It is used to set the current value on the progress bar.
+*/
+
+package JavaSwing;
+import javax.swing.*;
+import javax.swing.JProgressBar;
+public class JProgressBar1 extends JFrame {
+JProgressBar jb;
+int i=0,num=0;
+JProgressBar1(){
+jb=new JProgressBar(0,2000);
+jb.setBounds(40,40,160,30);
+jb.setValue(0);
+jb.setStringPainted(true);
+add(jb);
+setSize(250,250);
+setLayout(null);
+}
+public void iterarate(){
+while(i<2000){
+jb.setValue(i);
+i=i+20;
+try
+{
+Thread.sleep(150);
+}
+catch(Exception e){
+}}
+public static void main(String args[]){
+  
+  JProgressBar1 m=new JProgressBar1();
+  m.setVisible(true);
+  m.iterate();
+  }}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
