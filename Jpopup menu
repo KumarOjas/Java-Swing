@@ -22,30 +22,7 @@ argument or vice versa.
 show(Component c, int x, int y) : displays the popup menu at x, y position within the component c.
 */
 
-package JavaSwing;
-import javax.swing.*;
-import java.awt.event.*;
-public class popup 
-{
-publlic static void main(String args[])
-{
-final JFrame frame=new JFrame("JFrame");
-final JPopMenu popup=new JPopupMenu();
-JMenuItem menuItem=new JMenuItem("New Project", new ImageIcon("C:\\Users\\ABC\\eclipse-workspace....png");
-menuItem.setMnemonic(KeyEvent.VK_P);
-menuItem.getAccessibleContext().setAccessibleDescription("New Project");
-menuItem.addActionListener(new ActionListener(){
-public void actionPerformed(ActionEvent e){
-JOptionPane.showConfirmDialog(frame,"New Project Clicked");
-}});
-popup.add(menuItem);
-menuItem=new JMenuItem("New File",new ImageIcon("C:\\Users\\ABC\\eclipse.....png");
-menuItem.setMnemonic(KeyEvent.VK__F);
-menuItem.addActionListener(new ActionListener(){
-public void actionPerformed(ActionEvent e) {
- JOptionPane.showMessageDialog(frame,"New File Clicked");
- }});
- frame.addMouseListener(new MouseAdapter(){
+
 /*
 Java MouseListener Interface
 The Java MouseListener is notified whenever you change the state of mouse.
@@ -356,6 +333,30 @@ static int	VK_X
 static int	VK_Y 
 static int	VK_Z 
 */
+package JavaSwing;
+import javax.swing.*;
+import java.awt.event.*;
+public class popup 
+{
+publlic static void main(String args[])
+{
+final JFrame frame=new JFrame("JFrame");
+final JPopMenu popup=new JPopupMenu();
+JMenuItem menuItem=new JMenuItem("New Project", new ImageIcon("C:\\Users\\ABC\\eclipse-workspace....png");
+menuItem.setMnemonic(KeyEvent.VK_P);
+menuItem.getAccessibleContext().setAccessibleDescription("New Project");
+menuItem.addActionListener(new ActionListener(){
+public void actionPerformed(ActionEvent e){
+JOptionPane.showConfirmDialog(frame,"New Project Clicked");
+}});
+popup.add(menuItem);
+menuItem=new JMenuItem("New File",new ImageIcon("C:\\Users\\ABC\\eclipse.....png");
+menuItem.setMnemonic(KeyEvent.VK__F);
+menuItem.addActionListener(new ActionListener(){
+public void actionPerformed(ActionEvent e) {
+ JOptionPane.showMessageDialog(frame,"New File Clicked");
+ }});
+ frame.addMouseListener(new MouseAdapter(){
 public void mousePressed(MountEvent e)
 {
  showPop(e);
