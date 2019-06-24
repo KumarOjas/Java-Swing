@@ -1,0 +1,107 @@
+/*
+
+Java JTree
+The JTree class is used to display the tree structured data or hierarchical data. 
+JTree is a complex component. It has a 'root node' at the top most which is a parent for 
+all nodes in the tree. It inherits JComponent class.
+
+JTree class declaration
+Let's see the declaration for javax.swing.JTree class.
+
+public class JTree extends JComponent implements Scrollable, Accessible  
+Commonly used Constructors:
+Constructor	Description
+JTree()	Creates a JTree with a sample model.
+JTree(Object[] value)	Creates a JTree with every element of the specified array as the child of a new 
+root node.
+JTree(TreeNode root)	Creates a JTree with the specified TreeNode as its root, which displays the 
+root node.
+
+*/
+package JavaSwing;
+import javax.swing.JFrame;
+import javax.swing.JTree;
+import javax.swing.SwingUtilities;
+import javax.swing.tree.DefaultMutableTreeNode;
+
+public class Jtreenode extends JFrame {
+private JTree tree;
+public Jtreenode() {
+    DefaultMutableTreeNode root=new  DefaultMutableTreeNode("Root");
+    DefaultMutableTreeNode vegetableNode=new DefaultMutableTreeNode("Vegetable");
+     DefaultMutableTreeNode fruitNode=new DefaultMutableTreeNode("Fruits");
+     
+     root.add(vegetableNode);
+     
+     root.add(fruitNode);
+     tree=new JTree(root);
+     add(tree);
+     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     this.setTiltle("J Tree Node");
+     this.pack();
+     
+     /*
+     The pack method sizes the frame so that all its contents are at or above their preferred sizes.
+     An alternative to pack is to establish a frame size explicitly by calling setSize or setBounds 
+     (which also sets the frame location).
+     */
+     this.setVisible(true);
+     }
+     public static void main(String args[])
+     {
+     SwingUtilities.invokeLater(new Runnable(){
+     public void run(){
+     new Jtreenode();
+     }});
+     } }
+     
+     Output:
+     
+     _______________
+    |          []  *|
+    |  Root         |
+    |  Vegetable    |
+    |  Fruits       |
+    |_______________|
+
+
+/*
+
+A DefaultMutableTreeNode is a general-purpose node in a tree data structure. For examples of using 
+default mutable tree nodes
+
+*/
+//Program 2
+import javax.swing.JFrame;
+import javax.swing.JTree;
+public class Jtreenode1{
+  JFrame f;
+  Jtreenode1(){
+  DefaultMutableTreeNode style=new 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
