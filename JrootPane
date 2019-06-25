@@ -26,3 +26,15 @@ public class JRootPane {
             f.setVisible(true);  
           }  
 }  
+
+Output:
+
+______________________________
+|* - []                      |
+|                            | 
+|File                        |
+|Open                        |
+|Close                       |
+|            Press Me        |
+|                            |
+|____________________________|
