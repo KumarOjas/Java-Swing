@@ -1,0 +1,52 @@
+package JavaSwing;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+public class Jeditorpane {
+
+JFrame myFrame=null;
+public static void main(String args[])
+{
+(new Jeditorpane()) test());
+}
+private void test() {
+myframe = new JFrame("JEditorPane");
+myframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+myFrame.setSize(400,200);
+JEditorPane myPane=new JEditorPane();
+myPane.setContentType("text/plain");
+myPane.setText("The quick brown fox jumps over the lazy dog".
++The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog
+"The quick brown fox jumps over the lazy dog+
+""The quick brown fox jumps over the lazy dog");
+myFrame.setContentPane(myPane);
+myFrame.setVisible(true);
+}}
+
+
+Output:
+________________________________________________________
+|JEditorPane                                   - [] *   |  
+|                                                       |
+| The quick brown fox jumps over the lazy dog.The quick |
+| brown fox jumps over the lazy dog.The quick brown fox |
+| jumps over the lazy dog.The quick brown fox jumps     |
+| over the lazy dog.                                    |
+|                                                       |
+|                                                       |
+|______________________________________________________ |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
