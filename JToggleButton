@@ -175,6 +175,33 @@ public class JtoggleButton1 extends JFrame {
     
     
     
+    Output:
+    
+    
+    
+    
+    
+    
+    
+    
+    [Toggle Button 1]   [Toggle Button 2]
+    
+    
+    
+                                                               Image                              [Toggle Button 5]
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                    [Toggle Button 6]     [Toggle Button 7]
     
     
     
@@ -214,17 +241,6 @@ public class JtoggleButton1 extends JFrame {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    }}
     
    
     
