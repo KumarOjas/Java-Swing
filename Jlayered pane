@@ -1,0 +1,142 @@
+/*
+
+Class JLayeredPane
+java.lang.Object
+java.awt.Component
+java.awt.Container
+javax.swing.JComponent
+javax.swing.JLayeredPane
+All Implemented Interfaces:
+ImageObserver, MenuContainer, Serializable, Accessible
+Direct Known Subclasses:
+JDesktopPane
+
+public class JLayeredPane
+extends JComponent
+implements Accessible
+JLayeredPane adds depth to a JFC/Swing container, allowing components to overlap each other when needed. An Integer object specifies each
+component's depth in the container, where higher-numbered components sit "on top" of other components. For task-oriented documentation and
+examples of using layered panes see How to Use a Layered Pane, a section in The Java Tutorial.
+The following text describes this image.
+
+For convenience, JLayeredPane divides the depth-range into several different layers. Putting a component into one of those layers makes it
+easy to ensure that components overlap properly, without having to worry about specifying numbers for specific depths:
+DEFAULT_LAYER
+The standard layer, where most components go. This the bottommost layer.
+PALETTE_LAYER
+The palette layer sits over the default layer. Useful for floating toolbars and palettes, so they can be positioned above other components.
+MODAL_LAYER
+The layer used for modal dialogs. They will appear on top of any toolbars, palettes, or standard components in the container.
+POPUP_LAYER
+The popup layer displays above dialogs. That way, the popup windows associated with combo boxes, tooltips, and other help text will appear
+above the component, palette, or dialog that generated them.
+DRAG_LAYER
+When dragging a component, reassigning it to the drag layer ensures that it is positioned over every other component in the container.
+When finished dragging, it can be reassigned to its normal layer.
+
+*/
+package JavaSwing;
+import javax.swing.*;
+import java.awt.*;
+public class layeredPane extends JFrame {
+   
+   public layeredPane() {
+   
+   super("layeredPane Exp");
+   setSize(200,200);
+   JLayeredPane pane=getLayeredPane();
+   
+   JButton top=new JButton();
+   top.setBackground(Color.WHITE);
+   top.setBounds(20,20,50,50);
+   
+   
+     
+   JButton bottom=new JButton();
+   top.setBackground(Color.red);
+   top.setBounds(40,40,50,50);
+   
+   
+     
+   JButton bottom=new JButton();
+   top.setBackground(Color.blue);
+   top.setBounds(60,60,50,50);
+   
+   pane.add(bottom,new Integer(1));
+    pane.add(middle,new Integer(2));
+     pane.add(top,new Integer(3));
+     }
+     
+     public static void main(String args[]){
+     layeredPane pane1=new layeredPane();
+     panel.setVisible(true);
+     }}
+      
+      
+   Output:
+   
+   ____________________________________________
+   | Layered pane example           - [] *    |
+   |                                          |
+   |    _______                               |
+   |    |     |                               |
+   |    |Blue |                               |
+   |    |_____|                               |
+   |__________________________________________|_
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+      
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+
+
+
+
+
+
+
+
+
+
