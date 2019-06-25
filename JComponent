@@ -1,0 +1,56 @@
+/*
+Java JComponent
+The JComponent class is the base class of all Swing components except top-level containers. 
+Swing components whose names begin with "J" are descendants of the JComponent class. For example,
+JButton, JScrollPane, JPanel, JTable etc. But, JFrame and JDialog don't inherit JComponent class
+because they are the child of top-level containers.
+
+The JComponent class extends the Container class which itself extends Component. The Container class
+has support for adding components to the container.
+*/
+package JavaSwing;
+import javax.swing.JFrame;
+public class jcomp1 {
+
+ public static void main(String args[])
+{
+  Jcomponent comm=new Jcomponent();
+  JFrame.setDefaultLookAndFreeDecorated(true);
+  JFrame frame =new JFrame("jcomponents");
+  frame.setSize(300,300);
+  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  frame.add(comm);
+  frame.setVisible(true);
+  }}
+
+
+
+Output:    
+
+__________________________
+|  jcomponents     - [] * |
+|                         |
+|                         |
+|                         |          
+|                         |
+|_________________________|_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
