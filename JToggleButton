@@ -1,0 +1,339 @@
+/*
+Java JToggleButton
+JToggleButton is used to create toggle button, it is two-states button to switch on or off.
+
+Nested Classes
+Modifier and Type	Class	Description
+protected class	JToggleButton.AccessibleJToggleButton	This class implements accessibility support for
+the JToggleButton class.
+static class	JToggleButton.ToggleButtonModel	The ToggleButton model
+Constructors
+Constructor	Description
+JToggleButton()	It creates an initially unselected toggle button without setting the text or image.
+JToggleButton(Action a)	It creates a toggle button where properties are taken from the Action supplied.
+JToggleButton(Icon icon)	It creates an initially unselected toggle button with the specified image but
+no text.
+JToggleButton(Icon icon, boolean selected)	It creates a toggle button with the specified image and 
+selection state, but no text.
+JToggleButton(String text)	It creates an unselected toggle button with the specified text.
+JToggleButton(String text, boolean selected)	It creates a toggle button with the specified text and
+selection state.
+JToggleButton(String text, Icon icon)	It creates a toggle button that has the specified text and image,
+and that is initially unselected.
+JToggleButton(String text, Icon icon, boolean selected)	It creates a toggle button with the specified 
+text, image, and selection state.
+Methods
+Modifier and Type	Method	Description
+AccessibleContext	getAccessibleContext()	It gets the AccessibleContext associated with this
+JToggleButton.
+String	getUIClassID()	It returns a string that specifies the name of the l&f class that renders this
+component.
+protected String	paramString()	It returns a string representation of this JToggleButton.
+void	updateUI()	It resets the UI property to a value from the current look and feel.
+*/
+
+
+package JavaSwing;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import javax.swing.JFrame;
+import javax.swing.JToggleButton;
+import java.awt.*;
+import javax.swing.*;
+public class JtoggleButton extends JFrame implemeents ItemListener {
+public static void main(String args[])
+{
+   new JtoggleButton();
+ }  
+private JToggleButton button;
+JToggleButton(){
+setTitle("JTogle Button");
+setLayout (new FlowLayout());
+setJToggleButton();
+setAction();
+setSize(200,200);
+setVisible(true);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}
+private void setJToggleButton() {
+   button=new JToggleButton("On");
+   add(button);
+   }
+   private void setAction(){
+   button.addItemListener(this);
+   }
+   public void itemStateChanged(ItemEvent eve){
+   if (button.isSelected())
+   {
+   
+      button.setText("OFF");
+   }
+   else{
+   
+      button.setText("ON");
+      }
+
+
+
+
+Output:
+
+_____________________________________
+|                           - [] *  |
+|                                   |
+|                                   |
+|          [ON]/[OFF]               |
+|                                   |
+|                                   |
+|                                   |
+|                                   |
+|                                   |
+|___________________________________|
+
+
+
+package JavaSwing;
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.text.*;
+
+public class JtoggleButton1 extends JFrame {
+ JToggleButton t1,t2,t3,t4,t5,t6,t7,t8;
+ ImageIcon i1,i2,i3,i4,i5,i6,i7;
+ public JtoggleButton1(){
+ createAndShowGUI();
+ }
+ private void createandShowGUI(){
+  setTitle("JToggle button 2");
+  setLayout(new FlowLayout());
+  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  i1=new ImageIcon("C:\\Users\\ABC\\..........png");
+  i2=new ImageIcon("C:\\Users\\ABC\\..........png");
+  i3=new ImageIcon("C:\\Users\\ABC\\..........png");
+  i4=new ImageIcon("C:\\Users\\ABC\\..........png");
+  i5=new ImageIcon("C:\\Users\\ABC\\..........png");
+  i6=new ImageIcon("C:\\Users\\ABC\\..........png");
+  i7=new ImageIcon("C:\\Users\\ABC\\..........png");
+  t1=new JToggleButton();
+  t2=new JToggleButton(new DefaultEditorKit.BeepAction());
+  t3=new JToggleButton(i1);
+   t4=new JToggleButton(i2,true);
+   t5=new JToggleButton("Toggle Button 5");
+   t6=new JToggleButton("Toggle Button 6",true);
+   t7=new JToggleButton("Toggle Button 7",i3);
+   t8=new JToggleButton("Toggle Button 8",i4,true);
+   t1.setBackground(Color.LIGHT_GRAY);
+    t1.setForeground(Color.BLACK);
+    t1.setActionCommand("JToggleButton t1");
+    t1.setText("Toggle Button 1");
+    t2.setText("Toggle Button 2");
+    t2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    t4.setRolloverIcon(i5);
+    t4.setContentAreaFilled(false);
+    t4.setBorderPainted(false);
+    t4.setRolloverIcon(i6);
+    t4.setRolloverIcon(i7);
+    t3.setRolloverEnabled(false);
+    t8.setEnabled(false);
+    t8.setDisabledSelectionIcon(i6);
+    t8.setDisabledIcon(i6);
+    t7.setIconTextGap(10);
+    t7.setVerticalTextPosition(3);
+    t7.setHorizontalTextPosition(SwingConstants.CENTER);
+    t7.setFocusPainted(false);
+    t7.setBorderPainted(false);
+    t7.setContentAreaFilled(false);
+    System.out.println("T4 is selected"+t4.isSelected());
+    System.out.println("Focus paited for t4"+t4.isFocusPainted());
+    System.out.println("Border paited for t4"+t4.isBorderPainted());
+     System.out.println("Focus paited for t4"+t4.isContentAreaFilled());
+     
+     
+     add(t1);
+     add(t2);
+     add(t3);
+     add(t4);
+     add(t5);
+     add(t6);
+     add(t7);
+     add(t8);
+    
+    
+    setSize(700,600);
+    setVisible(true);
+    
+    
+    }
+    
+   public static void main (String args[])
+   {
+   SwingUtilities.invokeLater(new Runnable(){
+   public void run() {
+   new JtoggleButton1();
+   }});
+   }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }}
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
