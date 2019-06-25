@@ -1,0 +1,141 @@
+/*
+Image result for JDesktop pane
+JDesktopPane. The JDesktopPane is a container which is used to create a multiple-document interface 
+or a virtual desktop.The JFrame inside the desktop becomes JInternalFrame. JInternalFrame is used 
+just like the JFrame but is added to JDesktopPane object.
+
+*/
+
+
+
+
+
+
+package JavaSwing;
+import java.awt.BorderLayout;
+import java.awt.Container;
+import javax.swing.JDesktopPane;
+import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
+public class JdesktopPane extends JFrame {
+ public JdesktopPane() {
+  CustomDesktopPane desktopPane=new CustomDesktopPane();
+  Container contentPane=getContentPane();
+  contentPane.add(desktopPane,BorderLayout.CENTER);
+  desktopPane.display(desktopPane);
+  setTitle("Jdesktop");
+  setSize(300,250);
+  setVisible(true);
+  }
+  public static void main (String args[])
+  {
+  new JdesktopPane();
+  }
+  }
+ 
+ package JavaSwing;
+ import java.awt.Container;
+ import javax.swing.JDesktopPane;
+ import javax.swing.JInternalFrame;
+ import javax.swing.JLabel;
+ public class CustomDesktopPane extends JDesktopPane {
+ int numFrames=3,x=30,y=30;
+ public void display(CustomDesktopPane dp)
+ {
+ 
+  for(int i=0;i<numFrames;i++){
+  JInternalFrame jframe=new JInternalFrame("Internal Frame" +i,true,true,true,true);
+  jframe.setBounds(x,y,250,85);
+  Container c1=jframe.getContentPane();
+  c1.add(new JLabel("I love my country"));
+  dp.add(jframe);
+  jframe.setVisible(true);
+  y+=85;
+  }}}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Output:
+ ____________________________________________________________________________
+ JDesktopPane Example                                      - [] *           |      
+ _______________________________________________________________            |
+ |                                               -  [] *        |           |
+ |                                                              |           |
+ |Internal Frame 0                                              |           |
+ |I love my country                                             |           |
+ |______________________________________________________________|           |
+ |                                                                          |
+ | ______________________________________________________________           |
+ |                                               -  [] *        |           |
+ |                                                              |           |
+ |Internal Frame 0                                              |           |
+ |I love my country                                             |           |
+ |______________________________________________________________|           |
+ |                                                                          |
+ | ______________________________________________________________           |
+ |                                               -  [] *        |           |
+ |                                                              |           |
+ |Internal Frame 0                                              |           |
+ |I love my country                                             |           |
+ |______________________________________________________________|           |
+                                                                            | 
+                                                                            |
+ ___________________________________________________________________________|
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
