@@ -1,0 +1,57 @@
+/*
+
+Java JFrame
+The javax.swing.JFrame class is a type of container which inherits the java.awt.Frame class. 
+JFrame works like the main window where components like labels, buttons, textfields are added 
+to create a GUI.
+
+Unlike Frame, JFrame has the option to hide or close the window with the help of 
+setDefaultCloseOperation(int) method.
+
+*/
+package JavaSwing;
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+public class jframe {
+public static void main(String args[])
+{
+ JFrame frame=new JFrame("JFrame");
+ JPanel panel=new JPanel();
+ panel.setLayout(new FlowLayout());
+ JLabel label=new JLabel("jFrame");
+ JButton button=new JButton();
+ button.setText("button");
+ panel.add(label);
+  panel.add(button);
+   panel.add(panel);
+ frame.setSize(200,300);
+ frame.setLocationRelativeTo(null);
+ frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ frame.setVisible(true);
+ }}
+ 
+ Output:
+ 
+ _______________________
+ |JFrame       - [] *  |
+ |                     |
+ | jFrame   [button]   |
+ |                     |
+ |                     |
+ |                     |
+ |                     |
+ |_____________________|
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
