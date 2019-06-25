@@ -1,0 +1,176 @@
+/*
+Java JSplitPane
+JSplitPane is used to divide two components. The two components are divided based on the look and feel implementation, and they can be 
+resized by the user. If the minimum size of the two components is greater than the size of the split pane, the divider will not allow
+you to resize it.
+
+The two components in a split pane can be aligned left to right using JSplitPane.HORIZONTAL_SPLIT, or top to bottom using JSplitPane.
+VERTICAL_SPLIT. When the user is resizing the components the minimum size of the components is used to determine the maximum/minimum 
+position the components can be set to.
+
+Nested Class
+Modifier and Type	Class	Description
+protected class	JSplitPane.AccessibleJSplitPane	This class implements accessibility support for the JsplitPane class.
+Useful Fields
+Modifier and Type	Field	Description
+static String	BOTTOM	It use to add a Component below the other Component.
+static String	CONTINUOUS_LAYOUT_PROPERTY	Bound property name for continuousLayout.
+static String	DIVIDER	It uses to add a Component that will represent the divider.
+static int	HORIZONTAL_SPLIT	Horizontal split indicates the Components are split along the x axis.
+protected int	lastDividerLocation	Previous location of the split pane.
+protected Component	leftComponent	The left or top component.
+static int	VERTICAL_SPLIT	Vertical split indicates the Components are split along the y axis.
+protected Component	rightComponent	The right or bottom component.
+protected int	orientation	How the views are split.
+Constructors
+Constructor	Description
+JSplitPane()	It creates a new JsplitPane configured to arrange the child components side-by-side horizontally, using two buttons for the
+components.
+JSplitPane(int newOrientation)	It creates a new JsplitPane configured with the specified orientation.
+JSplitPane(int newOrientation, boolean newContinuousLayout)	It creates a new JsplitPane with the specified orientation and redrawing 
+style.
+JSplitPane(int newOrientation, boolean newContinuousLayout, Component newLeftComponent, Component newRightComponent)	It creates a new
+JsplitPane with the specified orientation and redrawing style, and with the specified components.
+JSplitPane(int newOrientation, Component newLeftComponent, Component newRightComponent)	It creates a new JsplitPane with the specified
+orientation and the specified components.
+Useful Methods
+Modifier and Type	Method	Description
+protected void	addImpl(Component comp, Object constraints, int index)	It cdds the specified component to this split pane.
+AccessibleContext	getAccessibleContext()	It gets the AccessibleContext associated with this JSplitPane.
+int	getDividerLocation()	It returns the last value passed to setDividerLocation.
+int	getDividerSize()	It returns the size of the divider.
+Component	getBottomComponent()	It returns the component below, or to the right of the divider.
+Component	getRightComponent()	It returns the component to the right (or below) the divider.
+SplitPaneUI	getUI()	It returns the SplitPaneUI that is providing the current look and feel.
+boolean	isContinuousLayout()	It gets the continuousLayout property.
+boolean	isOneTouchExpandable()	It gets the oneTouchExpandable property.
+void	setOrientation(int orientation)	It gets the orientation, or how the splitter is divided.
+*/
+
+
+package JavaSwing;
+{
+package JavaSwing;
+import java.awt.*;
+import javax.swing.*;
+public class jsplitpane {
+
+private static void createAndShow() {
+
+ final JFrame frame=new JFrame("Jsplit");
+ frame.setSize(300,300);
+ farme.setVisible(true);
+ frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ frame.getContentPane().setLayout(new FlowLayout());
+ String[] option1={"a","b","c","d","e"};
+ JComboBox box1=new JComboBox(option 1);
+ String[] option2={"1","2","3","4","5"};
+ JComboBox box2=new JComboBox(option2);
+ Panel panel1=new Panel();
+ panel1.add(box1);
+ Panel panel2=new Panel();
+ panel2.add(box2);
+ JSplitPane splitpane=new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,panel1,panel2);
+ frame.getContentPane().add(splitpane);
+ }
+ public static void main(String args[]){
+  javax.swing.SwingUtilities.invokeLater(new Runnable() {
+  public void run(){
+   createAndShow();
+   });
+   }
+ 
+  
+________________________
+|Jsplit        - [] *  |     
+|                      |
+|                      |
+|                      |
+|     [a]  [1]         |
+|                      |
+|                      |
+|                      |
+|______________________|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
