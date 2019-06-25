@@ -1,0 +1,34 @@
+package JavaSwing;
+import java.awt.*;
+import java.swing.JFrame;
+
+public class imagescanvas extends Canvas{
+ public void paint(Graphics g)
+ {
+ Toolkit t=Toolkit.getDefaultToolkit();
+ Image i=t.getImage("C:\\Users\\ABC\\....png");
+ g.drawImage(i,120,120,this);
+ }
+ public static void main (String args[])
+ {
+ Imagescanvas 
+ 
+ 
+ 
+ 
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ }
