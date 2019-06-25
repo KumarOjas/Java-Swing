@@ -1,0 +1,107 @@
+/*
+public class JViewport
+extends JComponent
+implements Accessible
+The "viewport" or "porthole" through which you see the underlying information. When you scroll, what moves is the viewport.
+It is like peering through a camera's viewfinder. Moving the viewfinder upwards brings new things into view at the top of the picture 
+and loses things that were at the bottom.
+By default, JViewport is opaque. To change this, use the setOpaque method.
+*/
+
+package JavaSwing;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.border.LineBorder;
+public class viewport {
+public static void main(String args[])
+{
+
+  JFrame frame=new JFrame("View Port");
+  frame.setDeafaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  JLabel label=new JLabel("Label");
+  label.setPreferredSize(new Dimension(1000,1000));
+  JScrollpane jscrollpane=new JScrollPane(label);
+  JButton jButton1=new JButton();
+  jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+  jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+  jScrollPane.setViewportBorder(new LineBorder(Color.RED));
+  jscrollPane.getViewport().add(jButton1,null);
+  frame.add(jScrollPane,BorderLayout.CENTER);
+  frame.setSize(400,150);
+  frame.setVisible(true);
+  }
+ 
+ 
+ 
+ Output:
+ 
+_____________________________________________________
+View Port                              - []  *      |
+_________________________________________________   |
+                                                | ^ |
+                                                |   |
+                                                |   |
+                                                |   |
+                                                |   |
+                                                |   |
+                                                |   |
+                                                |   |
+                                                |   |
+________________________________________________|\/ |                                             
+ <                                            >     |
+ ___________________________________________________|
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
