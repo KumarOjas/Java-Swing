@@ -1,0 +1,146 @@
+/*
+
+ Java JToolBar
+JToolBar container allows us to group other components, usually buttons with icons in a row or column. JToolBar provides a component which is useful for displaying commonly used actions or controls.
+
+Nested Classes
+Modifier and Type	Class	Description
+protected class	JToolBar.AccessibleJToolBar	This class implements accessibility support for the JToolBar class.
+static class	JToolBar.Separator	A toolbar-specific separator.
+Constructors
+Constructor	Description
+JToolBar()	It creates a new tool bar; orientation defaults to HORIZONTAL.
+JToolBar(int orientation)	It creates a new tool bar with the specified orientation.
+JToolBar(String name)	It creates a new tool bar with the specified name.
+JToolBar(String name, int orientation)	It creates a new tool bar with a specified name and orientation.
+Useful Methods
+Modifier and Type	Method	Description
+JButton	add(Action a)	It adds a new JButton which dispatches the action.
+protected void	addImpl(Component comp, Object constraints, int index)	If a JButton is being added, it is initially set to be disabled.
+void	addSeparator()	It appends a separator of default size to the end of the tool bar.
+protected PropertyChangeListener	createActionChangeListener(JButton b)	It returns a properly configured PropertyChangeListener which updates the control as changes to the Action occur, or null if the default property change listener for the control is desired.
+protected JButton	createActionComponent(Action a)	Factory method which creates the JButton for Actions added to the JToolBar.
+ToolBarUI	getUI()	It returns the tool bar's current UI.
+void	setUI(ToolBarUI ui)	It sets the L&F object that renders this component.
+void	setOrientation(int o)	It sets the orientation of the tool bar.
+
+*/
+ package JavaSwing;
+ import javax.swing.*;
+ import java.awt.*;
+ public class Jtoolbar extends JFrame {
+   JToolBar t1,t2,t3,t4;
+   public JtoolBar() {
+   createAndShowGUI();
+   }
+   private void createAndShowGUI() {
+   setTitle("Jtoolbar");
+   setDefaultCloseOperation(EXIT_ON_CLOSE);
+   setLayout(new FlowLayout());
+   t1=new JToolBar();
+    t2=new JToolBar(JToolBar.VERTICAL);
+     t3=new JToolBar("Toolbar 3");
+      t4=new JToolBar("Toolbar 4",JToolBar.VERTICAL);
+      for(int i=1;i<5;i++)
+  {     
+   t1.add(new JButton("Button"+i));
+   t1.addSeparator();
+   t2.add(new JButton("button"+i));
+   t3.add(new JButton("button"+i));
+   t4.add(new JButton("button"+i));
+   }
+   t1.setMargin(new Insects(10,10,10,10));
+   t1.setRollover(false);
+    t1.setFlotable(false);
+    add(t1);
+    add(t2);
+    add(t3);
+    add(t4);
+    setSize(500,500);
+    setVisible(true);
+    }
+    public static void main(String args[]){
+    new Jtoolbar();
+    }}
+    
+    
+   
+   
+   Output:
+   _____________________________________________________________________________
+   |  JtoolBar                                            - [] *               |
+   |                                                                           |
+   |                                                            button1        |
+   |   [Button 1]  [Button 2]  [Button 3] [Button 4]            button2        |
+   |                                                            button3        |
+   |                                                            button4        |
+   |                                                                           |
+   |                                                                           |
+   |            [button 1][button 2][button 3][button 4]         button1       |
+   |                                                             button2       |
+   |                                                             button3       |
+   |                                                             button4       |
+   |                                                                           |
+   |                                                                           |
+   |                                                                           |
+   |                                                                           |
+   |                                                                           |
+   |                                                                           |
+   |                                                                           |
+   |___________________________________________________________________________|
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
