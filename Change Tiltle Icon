@@ -1,0 +1,40 @@
+package JavaSwing;
+import java.awt.*;
+import javax.swing.*;
+public class Titlebar {
+Titlebar() {
+ JFrame f=new JFrame();
+ Image icon=Toolkit.getDeafault().getImage("C:\\Users\\ABC\\.....png");
+ f.setIconImage(icon);
+ f.setLayout(null);
+ f.setSize(200,200);
+ f.setVisible(true);
+ }
+ public static void main(String args[]){
+ new Titlebar();
+ }}
+ 
+Output:
+ _____________________________
+|                     - [] *  |
+|                             |
+|                             |
+|                             |
+|                             |
+|                             |
+|                             |
+|_____________________________|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
