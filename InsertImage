@@ -11,24 +11,26 @@ public class imagescanvas extends Canvas{
  }
  public static void main (String args[])
  {
- Imagescanvas 
+  Imagescanvas m=new imagecanvas();
+  JFrame f=new JFrame();
+  f.add(m);
+  f.setSize(400,400);
+  f.setVisible(true);
+  }}
+ 
+ 
+ Output:
+ 
+ 
+ 
+ Image
  
  
  
  
  
- }
  
  
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- }
